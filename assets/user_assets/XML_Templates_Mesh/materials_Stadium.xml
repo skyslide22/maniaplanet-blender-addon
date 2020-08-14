@@ -1,0 +1,266 @@
+<MeshParams Scale="1" MeshType="Static" Collection="$Collection">
+  <Materials>
+
+	
+  	<Material Name="_TDSN_StadiumRaceArch_Concrete" 			Model="TDSN"		BaseTexture="StadiumRaceArch"							PhysicsId="Concrete"/>
+  	<Material Name="Bark3"										Model="TDSN" BaseTexture="/Items/RPG_Textures/Vegetation/Bark3" PhysicsId="Trunk"/>
+  	<Material Name="_TDSN_StadiumRaceArch_Rubber" 				Model="TDSN"		BaseTexture="StadiumRaceArch"							PhysicsId="Rubber"/>
+
+	<!-- <Material Name="_TDSN_StadiumWater_NotCollidable" 				Model="TDSN" BaseTexture="StadiumWater" 					PhysicsId="NotCollidable"/>
+	<Material Name="_TDSN_StadiumWater_Concrete" 					Model="TDSN" BaseTexture="StadiumWater" 					PhysicsId="Concrete"/>
+	<Material Name="_TDSN_StadiumWater_Ice" 						Model="TDSN" BaseTexture="StadiumWater" 					PhysicsId="Ice"/>
+	<Material Name="_TDSN_StadiumWater_Snow" 						Model="TDSN" BaseTexture="StadiumWater" 					PhysicsId="Snow"/>
+	<Material Name="_TDSN_StadiumWater_Wood" 						Model="TDSN" BaseTexture="StadiumWater" 					PhysicsId="Wood"/>
+	
+	<Material Name="_TDSN_StadiumGrass_Wood"						Model="TDSN" BaseTexture="StadiumGrass" 					PhysicsId="Wood"/>
+	<Material Name="_TDSN_StadiumGrass_Grass" 						Model="TDSN" BaseTexture="StadiumGrass"						PhysicsId="Grass"/>
+	<Material Name="_TDSN_StadiumGrass_NotCollidable" 				Model="TDSN" BaseTexture="StadiumGrass"						PhysicsId="NotCollidable"/>
+
+	<Material Name="_TDSN_StadiumGrass_Concrete" 					Model="TDSN" BaseTexture="StadiumGrass" 					PhysicsId="Concrete"/>
+	<Material Name="_TDSN_StadiumGrass_Snow" 						Model="TDSN" BaseTexture="StadiumGrass" 					PhysicsId="Snow"/>
+	<Material Name="_TDSN_StadiumGrass_Ice" 						Model="TDSN" BaseTexture="StadiumGrass" 					PhysicsId="Ice"/>
+		
+	<Material Name="_TDSN_StadiumDirt_Wood" 						Model="TDSN" BaseTexture="StadiumDirt" 						PhysicsId="Wood"/>
+	<Material Name="_TDSN_StadiumDirt_Grass" 						Model="TDSN" BaseTexture="StadiumDirt" 						PhysicsId="Grass"/>
+	<Material Name="_TDSN_StadiumDirt_Concrete" 					Model="TDSN" BaseTexture="StadiumDirt" 						PhysicsId="Concrete"/>
+	<Material Name="_TDSN_StadiumDirt_Snow" 						Model="TDSN" BaseTexture="StadiumDirt" 						PhysicsId="Snow"/>
+	<Material Name="_TDSN_StadiumDirt_Ice" 							Model="TDSN" BaseTexture="StadiumDirt" 						PhysicsId="Ice"/>
+	<Material Name="_TDSN_StadiumDirt_Dirt" 						Model="TDSN" BaseTexture="StadiumDirt" 						PhysicsId="Dirt"/>
+
+	<Material Name="_TDSN_StadiumControlGlass_NotCollidable" 		Model="TDSN" BaseTexture="StadiumControlGlass" 			PhysicsId="NotCollidable"/>
+	<Material Name="_TDSN_StadiumControlGlass_Concrete"		 		Model="TDSN" BaseTexture="StadiumControlGlass" 			PhysicsId="Concrete"/>
+	<Material Name="_TDSN_StadiumControlGlass_Ice"		 		Model="TDSN" BaseTexture="StadiumControlGlass" 			PhysicsId="Ice"/>
+	
+
+	<Material Name="_TDSN_StadiumSculpt_Concrete" 					Model="TDSN" BaseTexture="StadiumSculpt" 					PhysicsId="Concrete"/>
+	<Material Name="_TDSN_StadiumSculpt2_Concrete" 					Model="TDSN" BaseTexture="StadiumSculpt2" 					PhysicsId="Concrete"/>
+
+	<Material Name="_TDSN_StadiumSculpt_NotCollidable" 					Model="TDSN" BaseTexture="StadiumSculpt" 					PhysicsId="NotCollidable"/>
+	<Material Name="_TDSN_StadiumSculpt2_NotCollidable" 					Model="TDSN" BaseTexture="StadiumSculpt2" 					PhysicsId="NotCollidable"/>	
+	
+	<Material Name="_TDSN_StadiumWarpStandsD_Concrete" 				Model="TDSN" BaseTexture="StadiumControlStands" 			PhysicsId="Concrete"/>
+	<Material Name="_TDSN_StadiumWarpStandsD_NotCollidable" 		Model="TDSN" BaseTexture="StadiumControlStands" 			PhysicsId="NotCollidable"/>
+	
+	<Material Name="_TDSN_StadiumWarpStands2D_Metal" 				Model="TDSN" BaseTexture="StadiumControlStands2" 			PhysicsId="Metal"/>
+	<Material Name="_TDSN_StadiumWarpStands2D_Concrete" 				Model="TDSN" BaseTexture="StadiumControlStands2" 			PhysicsId="Concrete"/>
+	<Material Name="_TDSN_StadiumWarpStands2D_NotCollidable" 		Model="TDSN" BaseTexture="StadiumControlStands2" 			PhysicsId="NotCollidable"/>
+
+	
+	<Material Name="_TDSN_StadiumDirtGrid_NotCollidable" 			Model="TDSN" BaseTexture="StadiumFence" 				PhysicsId="NotCollidable"/>
+	<Material Name="_TDSN_StadiumDirtGrid_Concrete" 				Model="TDSN" BaseTexture="StadiumFence" 				PhysicsId="Concrete"/>
+
+	<Material Name="_TDSN_StadiumPillar_Concrete" 					Model="TDSN" BaseTexture="StadiumPillar" 					PhysicsId="Concrete"/>
+	<Material Name="_TDSN_StadiumPillar_NotCollidable" 				Model="TDSN" BaseTexture="StadiumPillar" 					PhysicsId="NotCollidable"/>
+	 -->
+	
+	<Material Name="_TDSN_StadiumCircuit_Concrete" 					Model="TDSN" BaseTexture="StadiumCircuit" 					PhysicsId="Concrete"/>
+	<Material Name="_TDSN_StadiumCircuit_NotCollidable" 			Model="TDSN" BaseTexture="StadiumCircuit" 					PhysicsId="NotCollidable"/>
+	
+	<Material Name="_TDSN_StadiumPlatform_Concrete" 			Model="TDSN" BaseTexture="StadiumPlatform" 	PhysicsId="Concrete"/>
+	<Material Name="_TDSN_StadiumPlatform_TechSuperMagnetic"	Model="TDSN" BaseTexture="StadiumPlatform" 	PhysicsId="TechSuperMagnetic"/>
+	<Material Name="_TDSN_StadiumPlatform_NotCollidable" 		Model="TDSN" BaseTexture="StadiumPlatform" 	PhysicsId="NotCollidable"/>
+	
+	<!-- <Material Name="_TDSN_StadiumPlatformFloor_Concrete" 			Model="TDSN" BaseTexture="StadiumPlatformFloor" 			PhysicsId="Concrete"/>
+	<Material Name="_TDSN_StadiumPlatformFloor_NotCollidable" 		Model="TDSN" BaseTexture="StadiumPlatformFloor" 			PhysicsId="NotCollidable"/>
+
+	<Material Name="_TDSN_StadiumInflatable2_Concrete" 			Model="TDSN" BaseTexture="StadiumInflatable2" 			PhysicsId="Concrete"/>
+	
+	<Material Name="_TDSN_StadiumControlInterior_Concrete" 			Model="TDSN" BaseTexture="StadiumControlInterior" 			PhysicsId="Concrete"/>
+	
+	<Material Name="_TDSN_StadiumFabric_Concrete" 			Model="TDSN" BaseTexture="StadiumFabric" 			PhysicsId="Concrete"/>
+	<Material Name="_TDSN_StadiumFabricPool_Concrete" 			Model="TDSN" BaseTexture="StadiumFabricPool" 			PhysicsId="Concrete"/>
+	<Material Name="_TDSN_StadiumFabricStructure_Concrete" 			Model="TDSN" BaseTexture="StadiumFabricStructure" 			PhysicsId="Concrete"/>
+	<Material Name="_TDSN_StadiumRaceSignsRubber_Concrete" 			Model="TDSN" BaseTexture="StadiumRaceSignsRubber" 			PhysicsId="Concrete"/>
+	<Material Name="_TDSN_StadiumControlLogos_Concrete" 			Model="TDSN" BaseTexture="StadiumControlLogos" 			PhysicsId="Concrete"/>
+	<Material Name="_TDSN_StadiumWarpStands3D_Concrete" 			Model="TDSN" BaseTexture="StadiumControlStands3" 			PhysicsId="Concrete"/>
+	<Material Name="_TDSN_StadiumStructureAlpha_Concrete" 			Model="TDSN" BaseTexture="StadiumStructureAlpha" 			PhysicsId="Concrete"/>
+	<Material Name="_TDSN_StadiumStructureAlpha_turbo2" 			Model="TDSN" BaseTexture="StadiumStructureAlpha" 			PhysicsId="turbo2"/>
+	<Material Name="_TDSN_StadiumPlatformSoundSystem_Concrete" 			Model="TDSN" BaseTexture="StadiumPlatformSoundSystem" 			PhysicsId="Concrete"/>
+	<Material Name="_TDSN_StadiumControlAuvent2_Concrete" 			Model="TDSN" BaseTexture="StadiumControlAuvent2" 			PhysicsId="Concrete"/>
+	<Material Name="_TDSN_StadiumWarpSpotsGlowBackON_Concrete" 			Model="TDSN" BaseTexture="StadiumWarpSpotsGlowBackON" 			PhysicsId="Concrete"/>
+	<Material Name="_TDSN_StadiumInflatable_Concrete" 			Model="TDSN" BaseTexture="StadiumInflatable" 			PhysicsId="Concrete"/>
+	<Material Name="_TDSN__Concrete" 			Model="TDSN" BaseTexture="StadiumPlatform" 			PhysicsId="Concrete"/>
+	<Material Name="_TDSN__Concrete" 			Model="TDSN" BaseTexture="StadiumPlatform" 			PhysicsId="Concrete"/>
+	<Material Name="_TDSN__Concrete" 			Model="TDSN" BaseTexture="StadiumPlatform" 			PhysicsId="Concrete"/>
+	<Material Name="_TDSN__Concrete" 			Model="TDSN" BaseTexture="StadiumPlatform" 			PhysicsId="Concrete"/>
+	
+	
+	<Material Name="_TDSN_StadiumFabricFloor_Concrete" 				Model="TDSN" BaseTexture="StadiumFabricFloor" 				PhysicsId="Concrete"/>
+	<Material Name="_TDSN_StadiumFabricFloor_NotCollidable" 		Model="TDSN" BaseTexture="StadiumFabricFloor" 				PhysicsId="NotCollidable"/>
+	
+	<Material Name="_TDSN_StadiumRoadTurbo_turbo1" 					Model="TDSN" BaseTexture="StadiumRoadTurbo" 				PhysicsId="turbo"/>
+	<Material Name="_TDSN_StadiumRoadTurbo_turbo2" 					Model="TDSN" BaseTexture="StadiumRoadTurbo" 				PhysicsId="turbo2"/>
+	
+	<Material Name="_TDSN_StadiumRoadTurboRoulette_turbo1" 			Model="TDSN" BaseTexture="StadiumRoadTurboRoulette" 		PhysicsId="turbo"/>
+	<Material Name="_TDSN_StadiumRoadTurboRoulette_turbo2" 			Model="TDSN" BaseTexture="StadiumRoadTurboRoulette" 		PhysicsId="turbo2"/>
+	
+	
+	<Material Name="_TDSN_StadiumRoadBorder_Concrete" 				Model="TDSN" BaseTexture="StadiumRoadBorder" 				PhysicsId="Concrete"/>
+	<Material Name="_TDSN_StadiumRoadBorder_NotCollidable" 			Model="TDSN" BaseTexture="StadiumRoadBorder" 				PhysicsId="NotCollidable"/>
+	
+	<Material Name="_TDSN_StadiumRoadDetails_Concrete" 				Model="TDSN" BaseTexture="StadiumRoadDetails" 				PhysicsId="Concrete"/>
+	<Material Name="_TDSN_StadiumRoadDetails_Metal" 				Model="TDSN" BaseTexture="StadiumRoadDetails" 				PhysicsId="Metal"/>
+	<Material Name="_TDSN_StadiumRoadDetails_NotCollidable" 		Model="TDSN" BaseTexture="StadiumRoadDetails" 				PhysicsId="NotCollidable"/>	
+	
+	<Material Name="_TDSN_StadiumRoadGrid_Concrete" 				Model="TDSN" BaseTexture="StadiumRoadGrid" 					PhysicsId="Concrete"/>
+	
+	<Material Name="_TDSN_StadiumRoadGrid_Metal" 					Model="TDSN" BaseTexture="StadiumRoadGrid" 					PhysicsId="Metal"/>
+	<Material Name="_TDSN_StadiumRoadGrid2_Metal" 					Model="TDSN" BaseTexture="StadiumRoadGrid2" 					PhysicsId="Metal"/>
+	<Material Name="_TDSN_StadiumRoadGrid_NotCollidable" 			Model="TDSN" BaseTexture="StadiumRoadGrid" 					PhysicsId="NotCollidable"/>
+	
+	<Material Name="_TDSN_StadiumRoad_Concrete" 					Model="TDSN" BaseTexture="StadiumRoad" 						PhysicsId="Concrete"/>
+	<Material Name="_TDSN_StadiumRoad_NotCollidable" 				Model="TDSN" BaseTexture="StadiumRoad" 						PhysicsId="NotCollidable"/>
+	<Material Name="_TDSN_StadiumRoad_turbo2" 						Model="TDSN" BaseTexture="StadiumRoad" 						PhysicsId="turbo2"/>
+	
+	<Material Name="_TDSN_StadiumRoadRace_Concrete" 				Model="TDSN" BaseTexture="StadiumRoadRace" 						PhysicsId="Concrete"/>
+	
+	<Material Name="_TDSN_StadiumStructureGeneric2_Metal" 		Model="TDSN" BaseTexture="StadiumStructureGeneric2" 			PhysicsId="Metal"/>
+	<Material Name="_TDSN_StadiumStructureGeneric_Metal" 			Model="TDSN" BaseTexture="StadiumStructureGeneric" 			PhysicsId="Metal"/>
+
+		
+	<Material Name="_TDSN_StadiumRoadFreeWheeling_FreeWheeling" 	Model="TDSN" BaseTexture="StadiumRoadFreeWheeling" 			PhysicsId="FreeWheeling"/>
+	<Material Name="_TDSN_StadiumRoadTurbo_turbo" 					Model="TDSN" BaseTexture="StadiumRoadTurbo" 				PhysicsId="turbo"/>	
+
+	<Material Name="_TDSN_StadiumDirtRoad_Dirt" 					Model="TDSN" BaseTexture="StadiumDirtToRoad" 					PhysicsId="Dirt"/>
+	<Material Name="_TDSN_StadiumDirtBorder_Dirt" 					Model="TDSN" BaseTexture="StadiumDirtBorder" 					PhysicsId="Dirt"/>
+	<Material Name="_TDSN_StadiumDirtToRoad_Dirt" 					Model="TDSN" BaseTexture="StadiumDirtToRoad" 					PhysicsId="Dirt"/>
+	<Material Name="_TDSN_StadiumDirtRoad_Concrete" 				Model="TDSN" BaseTexture="StadiumDirtToRoad" 					PhysicsId="Concrete"/>
+	<Material Name="_TDSN_StadiumDirtRoad_NotCollidable" 			Model="TDSN" BaseTexture="StadiumDirtToRoad" 					PhysicsId="NotCollidable"/>
+	<Material Name="_TDSN_StadiumRoadDirtToRoad_Dirt" 				Model="TDSN" BaseTexture="StadiumRoadDirtToRoadFlat"				PhysicsId="Dirt"/>	
+	<Material Name="_TDSN_StadiumRoadToDirt_Dirt" 				Model="TDSN" BaseTexture="StadiumRoadToDirt"				PhysicsId="Concrete"/>	
+	<Material Name="_TDSN_StadiumRoadDirtTurbo_turbo" 				Model="TDSN" BaseTexture="StadiumRoadDirtTurbo"				PhysicsId="turbo"/>	
+	
+	<Material Name="_TDSN_StadiumDirtBorder_Dirt" 					Model="TDSN" BaseTexture="StadiumDirtBorder" 				PhysicsId="Dirt"/>
+	
+	<Material Name="_TDSN_StadiumRaceSignsRubber_Concrete" 			Model="TDSN" BaseTexture="StadiumRaceSignsRubber"			PhysicsId="Concrete"/>
+	<Material Name="_TDSN_StadiumRaceSignsRubber_NotCollidable" 	Model="TDSN" BaseTexture="StadiumRaceSignsRubber" 			PhysicsId="NotCollidable"/>
+	
+	<Material Name="_TDSN_StadiumPlatformSpots_Concrete" 			Model="TDSN" BaseTexture="StadiumControlSpots"				PhysicsId="Concrete"/>
+	<Material Name="_TDSN_StadiumPlatformSpots_NotCollidable" 		Model="TDSN" BaseTexture="StadiumControlSpots" 				PhysicsId="NotCollidable"/>
+	<Material Name="_TDSN_StadiumPlatformSpotsON_Concrete" 			Model="TDSN" BaseTexture="StadiumControlSpotsON"				PhysicsId="Concrete"/>
+	<Material Name="_TDSN_StadiumPlatformSpotsON_NotCollidable" 		Model="TDSN" BaseTexture="StadiumControlSpotsON" 				PhysicsId="NotCollidable"/>
+	
+	<Material Name="_TDSN_StadiumWarpStands_Concrete" 				Model="TDSN" BaseTexture="StadiumControlStands"							PhysicsId="Concrete"/>
+	<Material Name="_TDSN_StadiumWarpStands_NotCollidable" 			Model="TDSN" BaseTexture="StadiumControlStands"							PhysicsId="NotCollidable"/>
+
+	<Material Name="_TDSN_StadiumAirship_Concrete" 					Model="TDSN" BaseTexture="StadiumAirship"								PhysicsId="Concrete"/>
+	<Material Name="_TDSN_StadiumCircuitLogo_Concrete" 				Model="TDSN" BaseTexture="StadiumCircuitLogo"							PhysicsId="Concrete"/>
+	<Material Name="_TDSN_StadiumFan_Concrete" 						Model="TDSN" BaseTexture="StadiumFan"									PhysicsId="Concrete"/>
+	<Material Name="_TDSN_StadiumFan_NotCollidable" 				Model="TDSN" BaseTexture="StadiumFan"									PhysicsId="NotCollidable"/>
+
+	<Material Name="_TDSN_StadiumRoadCircuitBorder_Concrete" 		Model="TDSN" BaseTexture="StadiumRoadCircuitBorder"						PhysicsId="Concrete"/>
+	<Material Name="_TDSN_StadiumControlAuvent2_NotCollidable" 		Model="TDSN" BaseTexture="StadiumControlAuvent2"						PhysicsId="NotCollidable"/>	
+	<Material Name="_TDSN_StadiumControlAuvent2_Concrete" 			Model="TDSN" BaseTexture="StadiumControlAuvent2"						PhysicsId="Concrete"/>
+
+	<Material Name="StadiumAirship" 								Model="TDSN" BaseTexture="StadiumAirship"								PhysicsId="Concrete"/>
+
+	
+	
+	<Material Name="_TDSN_StadiumControlStands2_Concrete" 								Model="TDSN" BaseTexture="StadiumControlStands2"								PhysicsId="Concrete"/>
+	<Material Name="_TDSN_StadiumControlAuventAlpha_Concrete" 								Model="TDSN" BaseTexture="StadiumControlAuventAlpha"								PhysicsId="Concrete"/>
+	<Material Name="_TDSN_StadiumControlAuventAlpha_Metal" 								Model="TDSN" BaseTexture="StadiumControlAuventAlpha"								PhysicsId="Metal"/>
+	<Material Name="_TDSN_StadiumControlAuvent_Concrete" 								Model="TDSN" BaseTexture="StadiumControlAuvent"								PhysicsId="Concrete"/> -->
+
+</Materials>
+
+<Lights>
+				<!-- Competition titlepack lights -->
+					
+	<Light Name="cp_terrain_1_#1_Light1" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="cp_terrain_1_#1_Light2" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="cp_terrain_1_#1_Light3" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="cp_terrain_1_#1_Light4" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="cp_terrain_1_#1_Light5" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="cp_terrain_1_#1_Light6" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="cp_terrain_1_#1_Light7" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="cp_terrain_1_#1_Light8" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="cp_terrain_1_#1_Light9" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="cp_terrain_1_#1_Light10" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="cp_terrain_1_#1_Light11" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+					
+	<Light Name="cp_terrain_1_#2_Light1" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="cp_terrain_1_#2_Light2" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="cp_terrain_1_#2_Light3" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="cp_terrain_1_#2_Light4" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="cp_terrain_1_#2_Light5" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="cp_terrain_1_#2_Light6" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="cp_terrain_1_#2_Light7" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="cp_terrain_1_#2_Light8" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="cp_terrain_1_#2_Light9" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="cp_terrain_1_#2_Light10" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="cp_terrain_1_#1_Light11" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+					
+	<Light Name="finish_terrain_1_#1_Light1" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="finish_terrain_1_#1_Light2" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="finish_terrain_1_#1_Light3" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="finish_terrain_1_#1_Light4" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="finish_terrain_1_#1_Light5" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="finish_terrain_1_#1_Light6" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="finish_terrain_1_#1_Light7" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="finish_terrain_1_#1_Light8" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="finish_terrain_1_#1_Light9" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="finish_terrain_1_#1_Light10" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="finish_terrain_1_#1_Light11" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+					
+	<Light Name="finish_terrain_1_#2_Light1" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="finish_terrain_1_#2_Light2" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="finish_terrain_1_#2_Light3" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="finish_terrain_1_#2_Light4" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="finish_terrain_1_#2_Light5" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="finish_terrain_1_#2_Light6" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="finish_terrain_1_#2_Light7" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="finish_terrain_1_#2_Light8" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="finish_terrain_1_#2_Light9" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="finish_terrain_1_#2_Light10" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="finish_terrain_1_#2_Light11" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+					
+	<Light Name="start_terrain_1_#1_Light1" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="start_terrain_1_#1_Light2" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="start_terrain_1_#1_Light3" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="start_terrain_1_#1_Light4" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="start_terrain_1_#1_Light5" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="start_terrain_1_#1_Light6" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="start_terrain_1_#1_Light7" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="start_terrain_1_#1_Light8" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="start_terrain_1_#1_Light9" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="start_terrain_1_#1_Light10" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="start_terrain_1_#1_Light11" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+					
+	<Light Name="start_terrain_1_#2_Light1" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="start_terrain_1_#2_Light2" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="start_terrain_1_#2_Light3" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="start_terrain_1_#2_Light4" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="start_terrain_1_#2_Light5" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="start_terrain_1_#2_Light6" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="start_terrain_1_#2_Light7" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="start_terrain_1_#2_Light8" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="start_terrain_1_#2_Light9" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="start_terrain_1_#2_Light10" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="start_terrain_1_#2_Light11" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+					
+	<Light Name="multilap_terrain_1_#1_Light1" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="multilap_terrain_1_#1_Light2" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="multilap_terrain_1_#1_Light3" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="multilap_terrain_1_#1_Light4" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="multilap_terrain_1_#1_Light5" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="multilap_terrain_1_#1_Light6" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="multilap_terrain_1_#1_Light7" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="multilap_terrain_1_#1_Light8" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="multilap_terrain_1_#1_Light9" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="multilap_terrain_1_#1_Light10" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="multilap_terrain_1_#1_Light11" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+					
+	<Light Name="multilap_terrain_1_#2_Light1" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="multilap_terrain_1_#2_Light2" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="multilap_terrain_1_#2_Light3" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="multilap_terrain_1_#2_Light4" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="multilap_terrain_1_#2_Light5" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="multilap_terrain_1_#2_Light6" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="multilap_terrain_1_#2_Light7" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="multilap_terrain_1_#2_Light8" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="multilap_terrain_1_#2_Light9" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="multilap_terrain_1_#2_Light10" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+	<Light Name="multilap_terrain_1_#2_Light11" 	NightOnly="true"	Type="Point" 	sRGB="0099ee" 		Intensity="1" 		Distance="32" 		PointEmissionRadius="0.6"/>		
+
+	</Lights>
+</MeshParams>

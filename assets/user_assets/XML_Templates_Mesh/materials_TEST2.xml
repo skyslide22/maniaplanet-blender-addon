@@ -1,0 +1,10 @@
+<MeshParams Scale="1" MeshType="Static" Collection="$Collection">
+ 	<Materials>
+
+	<Material Name="_TDSN_StadiumSculpt2_Concrete" 				Model="TDSN" BaseTexture="StadiumSculpt2" 		PhysicsId="Concrete"/>
+   	
+	</Materials>
+
+	<Lights>
+	</Lights>
+</MeshParams>

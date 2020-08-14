@@ -1,0 +1,75 @@
+<MeshParams Scale="1" MeshType="Static" Collection="$Collection">
+ 	<Materials>
+
+	<Material Name="_TDSN_StadiumSculpt2_Concrete" 				Model="TDSN" BaseTexture="StadiumSculpt2" 		PhysicsId="Concrete"/>
+   	<Material Name="_TDSN_StadiumSculpt2_NotCollidable" 		Model="TDSN" BaseTexture="StadiumSculpt2" 		PhysicsId="NotCollidable"/>
+	<Material Name="_TDSN_StadiumSculpt2_Asphalt" 				Model="TDSN" BaseTexture="StadiumSculpt2" 		PhysicsId="Asphalt"/>
+	<Material Name="_TDSN_StadiumSculpt2_Metal" 				Model="TDSN" BaseTexture="StadiumSculpt2" 		PhysicsId="Metal"/>
+	<Material Name="_TDSN_StadiumSculpt2_Wood" 					Model="TDSN" BaseTexture="StadiumSculpt2" 		PhysicsId="Wood"/>
+	<Material Name="_TDSN_StadiumSculpt_Dirt" 					Model="TDSN" BaseTexture="StadiumSculpt" 		PhysicsId="Dirt"/>
+	<Material Name="_TDSN_StadiumSculpt_Rock"					Model="TDSN" BaseTexture="StadiumSculpt" 		PhysicsId="Rock"/>
+	<Material Name="_TDSN_StadiumSculpt_Stone"					Model="TDSN" BaseTexture="StadiumSculpt" 		PhysicsId="Stone"/>
+	<Material Name="_TDSN_StadiumSculpt_Grass" 					Model="TDSN" BaseTexture="StadiumSculpt" 		PhysicsId="Grass"/>
+	<Material Name="_TDSN_StadiumSculpt_Concrete" 				Model="TDSN" BaseTexture="StadiumSculpt" 		PhysicsId="Concrete"/>
+
+	<Material Name="Branches1"						Model="TDOSN" BaseTexture="/Items/RPG_Textures/Vegetation/Branches1" PhysicsId="NotCollidable"/>
+	<Material Name="Branches2"						Model="TDOSN" BaseTexture="/Items/RPG_Textures/Vegetation/Branches2" PhysicsId="NotCollidable"/>
+
+	
+
+	
+	
+	<Material Name="Mushroom_Misc_01"				Model="TDSNI_Night" BaseTexture="/Items/RPG_Textures/Vegetation/MushMisc/Mushroom_Misc_01" PhysicsId="Trunk"/>
+	<Material Name="Mushroom_Misc_02"				Model="TDSNI_Night" BaseTexture="/Items/RPG_Textures/Vegetation/MushMisc/Mushroom_Misc_03" PhysicsId="Trunk"/>
+	<Material Name="Mushroom_Misc_03"				Model="TDSNI_Night" BaseTexture="/Items/RPG_Textures/Vegetation/MushMisc/Mushroom_Misc_03" PhysicsId="Trunk"/>
+	
+	<Material Name="Mushroom_Misc_09"				Model="TDSNI" BaseTexture="/Items/RPG_Textures/Vegetation/MushMisc/Mushroom_Misc_09" PhysicsId="Trunk"/>
+	<Material Name="Mushroom_Misc_10"				Model="TDSNI" BaseTexture="/Items/RPG_Textures/Vegetation/MushMisc/Mushroom_Misc_10" PhysicsId="Trunk"/>
+	<Material Name="Mushroom_Misc_11"				Model="TDSNI" BaseTexture="/Items/RPG_Textures/Vegetation/MushMisc/Mushroom_Misc_11" PhysicsId="Trunk"/>
+	<Material Name="Mushroom_Misc_12"				Model="TDSNI" BaseTexture="/Items/RPG_Textures/Vegetation/MushMisc/Mushroom_Misc_12" PhysicsId="Trunk"/>
+
+
+	<Material Name="GlowVinesGreenNC" 		Model="TIAdd" BaseTexture="/Items/RPG_Textures/VegetationGlow/Glow_Vines_Green" 		PhysicsId="NotCollidable"/>
+	<Material Name="GlowVinesRedNC" 		Model="TIAdd" BaseTexture="/Items/RPG_Textures/VegetationGlow/Glow_Vines_Red" 			PhysicsId="NotCollidable"/>
+	<Material Name="GlowVinesBlueNC" 		Model="TIAdd" BaseTexture="/Items/RPG_Textures/VegetationGlow/Glow_Vines_Blue" 			PhysicsId="NotCollidable"/>
+	<Material Name="GlowVinesVioletNC" 		Model="TIAdd" BaseTexture="/Items/RPG_Textures/VegetationGlow/Glow_Vines_Violet" 		PhysicsId="NotCollidable"/>
+	<Material Name="GlowVinesYellowNC" 		Model="TIAdd" BaseTexture="/Items/RPG_Textures/VegetationGlow/Glow_Vines_Yellow" 		PhysicsId="NotCollidable"/>
+	<Material Name="GlowVinesWhiteNC" 		Model="TIAdd" BaseTexture="/Items/RPG_Textures/VegetationGlow/Glow_Vines_White" 		PhysicsId="NotCollidable"/>
+
+
+
+	<Material Name="Rock"							Model="TDSN" BaseTexture="/Items/RPG_Textures/Rocks/Rock" PhysicsId="Rock"/>
+	<Material Name="Rock2"							Model="TDSN" BaseTexture="/Items/RPG_Textures/Rocks/Rock2" PhysicsId="Rock"/>
+	<Material Name="Rock4"							Model="TDSN" BaseTexture="/Items/RPG_Textures/Rocks/Rock4" PhysicsId="Rock"/>
+	<Material Name="Rock4NC"						Model="TDSN" BaseTexture="/Items/RPG_Textures/Rocks/Rock4" PhysicsId="Rock"/>
+	<Material Name="Rock6"							Model="TDSN" BaseTexture="/Items/RPG_Textures/Rocks/Rock6" PhysicsId="Rock"/>
+	<Material Name="RockCliff"						Model="TDSN" BaseTexture="/Items/RPG_Textures/Rocks/RockCliff" PhysicsId="Rock"/>
+	<Material Name="SnowRock"						Model="TDSN" BaseTexture="/Items/RPG_Textures/Rocks/SnowRock" PhysicsId="Snow"/>
+	<Material Name="IceRock"						Model="TDSN" BaseTexture="/Items/RPG_Textures/Rocks/IceRock" PhysicsId="Ice"/>
+	<Material Name="Glacier"						Model="TDSN" BaseTexture="/Items/RPG_Textures/Rocks/Glacier" PhysicsId="Ice"/>
+	<Material Name="RockSoil"						Model="TDSN" BaseTexture="/Items/RPG_Textures/Rocks/RockSoil" PhysicsId="Rock"/>
+
+	
+
+
+	<Material Name="RedGlass"											Model="TDOBSN" BaseTexture="/Items/RPG_Textures/Colors/Red" PhysicsId="Ice"/>
+	<Material Name="BlackGlass"											Model="TDOBSN" BaseTexture="/Items/RPG_Textures/Colors/Black" PhysicsId="Ice"/>
+	<Material Name="BlueGlass"											Model="TDOBSN" BaseTexture="/Items/RPG_Textures/Colors/Blue" PhysicsId="Ice"/>
+	<Material Name="CyanGlass"											Model="TDOBSN" BaseTexture="/Items/RPG_Textures/Colors/Cyan" PhysicsId="Ice"/>
+	<Material Name="GreenGlass"											Model="TDOBSN" BaseTexture="/Items/RPG_Textures/Colors/Green" PhysicsId="Ice"/>
+	<Material Name="LimeGlass"											Model="TDOBSN" BaseTexture="/Items/RPG_Textures/Colors/Lime" PhysicsId="Ice"/>
+	<Material Name="OrangeGlass"										Model="TDOBSN" BaseTexture="/Items/RPG_Textures/Colors/Orange" PhysicsId="Ice"/>
+	<Material Name="PinkGlass"											Model="TDOBSN" BaseTexture="/Items/RPG_Textures/Colors/Pink" PhysicsId="Ice"/>
+	<Material Name="VioletGlass"										Model="TDOBSN" BaseTexture="/Items/RPG_Textures/Colors/Violet" PhysicsId="Ice"/>
+	<Material Name="WhiteGlass"											Model="TDOBSN" BaseTexture="/Items/RPG_Textures/Colors/White" PhysicsId="Ice"/>
+	<Material Name="YellowGlass"										Model="TDOBSN" BaseTexture="/Items/RPG_Textures/Colors/Yellow" PhysicsId="Ice"/>
+	<Material Name="GreyGlass"											Model="TDOBSN" BaseTexture="/Items/RPG_Textures/Colors/Grey" PhysicsId="Ice"/>
+
+	
+	
+   -->
+	</Materials>
+
+	<Lights>
+	</Lights>
+</MeshParams>

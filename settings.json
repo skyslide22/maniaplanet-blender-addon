@@ -1,0 +1,67 @@
+
+
+
+{
+    "UISpacerFactor":       1.0,
+    "errorMsgNadeoIni":     "Select Nadeo.ini file first!",
+    "errorMsgAbsolutePath": "Absolute path only!",
+
+    "website_github":           "https://github.com/skyslide22/maniaplanet-blender-addon",
+    "website_bugreports":       "https://github.com/skyslide22/maniaplanet-blender-addon/issues",
+    "website_documentation":    "https://skyslide22.github.io/",
+    "website_regex":            "https://regex101.com/",
+
+    "maniaplanetTextureZipFiles" : [
+        "PacksCache/TMStadium.zip",
+        "PacksCache/TMStadium_2017-05-18.zip",
+
+        "PacksCache/TMCanyon_LD.zip",
+        "PacksCache/TMCanyon.zip",
+        "PacksCache/TMCanyon_HD.zip",
+        "PacksCache/TMCanyon_2017-05-18_LD.zip",
+        "PacksCache/TMCanyon_2017-05-18.zip",
+        "PacksCache/TMCanyon_2017-05-18_HD.zip",
+
+        "PacksCache/TMValley_LD.zip",
+        "PacksCache/TMValley.zip",
+        "PacksCache/TMValley_HD.zip",
+        "PacksCache/TMValley_2017-05-18_LD.zip",
+        "PacksCache/TMValley_2017-05-18.zip",
+        "PacksCache/TMValley_2017-05-18_HD.zip",
+
+        "PacksCache/TMLagoon_LD.zip",
+        "PacksCache/TMLagoon.zip",
+        "PacksCache/TMLagoon_HD.zip",
+        "PacksCache/TMLagoon_2017-05-18_LD.zip",
+        "PacksCache/TMLagoon_2017-05-18.zip",
+        "PacksCache/TMLagoon_2017-05-18_HD.zip",
+
+        "PacksCache/SMStorm_LD.zip",
+        "PacksCache/SMStorm.zip",
+        "PacksCache/SMStorm_HD.zip",
+        "PacksCache/SMStorm_2017-05-18_HD.zip",
+        "PacksCache/SMStorm_2017-05-18.zip",
+        "PacksCache/SMStorm_2017-05-18_LD.zip"
+    ],
+    "favPhysicIds": [
+        "Concrete",
+        "NotCollidable",
+        "Turbo",
+        "Turbo2",
+        "Freewheeling",
+        "TechMagnetic",
+        "TechSuperMagnetic",
+        "Dirt",
+        "Ice",
+        "Wood",
+        "Metal"
+    ],
+    "missingPhysicsInLib": [
+        "TechSuperMagnetic",
+        "Offzone"
+    ],
+    "notAllowedColnames": [
+        "master collection",
+        "scene"
+    ]
+}
