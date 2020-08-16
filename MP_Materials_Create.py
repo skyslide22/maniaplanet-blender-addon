@@ -198,7 +198,7 @@ def createMaterial(matname: str, basetex: str, model: str, physic: str, isNadeoM
         makeReportPopup(title=f"Material created", icon="ERROR")
     
     else: 
-        pro__print(" - material already exists, creation stopped", matname)
+        pro__print("material already exists, creation stopped", matname)
         makeReportPopup(title=f"Material with the name <{matname}> already exist!", icon="ERROR")
 
 
@@ -213,7 +213,7 @@ def deleteMaterialNodes(matname: str) -> None:
 
 
 def createMaterialNodes(matname: str) -> None:
-    """create nodes for material (TDSN etc, TIAdd), configure them:\n
+    """create nodes for material (Model= TDSN, TIAdd, etc),
     load textures if necessary, connect nodes if necessary, """
     mp_props = bpy.context.scene.mp_props
     imgs = bpy.data.images
@@ -236,8 +236,8 @@ def createMaterialNodes(matname: str) -> None:
     #node positions
     xstep = 300
     ystep = 300
-    def x(step): return  (xstep * step)
-    def y(step): return -(ystep * step)
+    x = lambda step:  (xstep * step)
+    y = lambda step: -(ystep * step)
     
     output = nodes.new(type="ShaderNodeOutputMaterial")
     output.location = x(7), y(2)

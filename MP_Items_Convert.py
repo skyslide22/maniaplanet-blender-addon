@@ -5,7 +5,7 @@ import re
 import subprocess
 import shutil
 from time import sleep
-from threading import *
+from threading import Thread
 import xml.etree.ElementTree as ET
 from xml.dom import minidom
 from .MP_Functions import *

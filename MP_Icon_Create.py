@@ -133,7 +133,7 @@ def createIconsTest():
     obj = bpy.context.selected_objects[0]
     col = obj.users_collection[0]
     
-    deleteIconObj()
+    deleteObj("ICON_OBJ")
     baseobj = str(obj.name)
     
     pro__print("iconobj exists:", "ICON_OBJ" in [o.name for o in bpy.data.objects])
@@ -149,7 +149,7 @@ def createIconsTest():
         createIcon(objname=objname, save=False)
     
     if objname is False:
-        deleteIconObj()
+        deleteObj("ICON_OBJ")
           
     deselectAll()
     bpy.context.scene.objects[baseobj].select_set(True)
@@ -186,7 +186,7 @@ def createIcons(colnames: list=[]):
     
     #create icon
     for colname in colnames:
-        deleteIconObj()
+        deleteObj("ICON_OBJ")
         objname = "ICON_OBJ"
         objname = combineObjsOfCollection(colname=colname, newobjname=objname)
         if objname is not False:
@@ -448,7 +448,7 @@ def combineObjsOfCollection(colname: str, newobjname: str="MERGED_COLLECTION_OBJ
     if len(objsToDuplicate) == 0: 
         return False
     
-    deleteIconObj()
+    deleteObj(objname="ICON_OBJ")
     
     duplicatedObjs = []
     for obj in objsToDuplicate:
@@ -474,24 +474,7 @@ def combineObjsOfCollection(colname: str, newobjname: str="MERGED_COLLECTION_OBJ
     return newobjname
     
     
-    
-def deleteIconObj():
-    """delte object with name "ICON_OBJ" """
-    unsetActiveObj()
-    
-    try:
-        objs = tuple(bpy.data.objects)
-        for obj in objs:
-            if "ICON_OBJ" in obj.name:
-                deselectAll()  
-                setActiveObj(objname=obj.name)
-                bpy.ops.object.delete()
-                pro__print("object removed:", obj.name)
-                unsetActiveObj()
-        
-    except Exception as err:
-        pro__print(err)
-        
+
     
     
     

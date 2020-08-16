@@ -23,6 +23,7 @@ from .MP_Items_Convert  import *
 from .MP_Items_XML      import *
 from .MP_Icon_Create    import *
 from .MP_Help           import *
+from .MP_Items_Import   import *
 
 itemsToConvert = []
 
@@ -96,18 +97,30 @@ class MP_PT_Items_Export(Panel):
         
         if actionIsConvert and not convertRunning:
             row = layout.row().prop(mp_props, "LI_fbx_expType",)
-            row = layout.row().prop(mp_props, "ST_fbx_importDirPath", text="Folder")
+            row = layout.row(align=True)
+            row.prop(mp_props, "ST_fbx_importDirPath", text="Folder")
+            row.prop(mp_props, "CB_fbx_importSubFolders", text="", icon="FOLDER_REDIRECT")
             
             if not "Work/Items" in fixSlash(mp_props.ST_fbx_importDirPath):
                 row = layout.row().label(text="Choose a Folder in /Work/Items/ !")
                 return
             
-            row = layout.row().label(text="Seperate by comma, empty to disable", icon="INFO")
-            row = layout.row().prop(mp_props, "ST_fbx_importPrefix")
-            row = layout.row().prop(mp_props, "ST_fbx_importSuffix")
-            row = layout.row().prop(mp_props, "ST_fbx_importInfix")
+            row = layout.row().prop(mp_props, "LI_fbx_importPatternType")
             
-            row = layout.row().prop(mp_props, "CB_fbx_importSubFolders")
+            patternType = mp_props.LI_fbx_importPatternType
+            
+            if patternType == "SIMPLE":
+                row = layout.row().label(text="Seperate by comma, empty to disable", icon="INFO")
+                row = layout.row().prop(mp_props, "ST_fbx_importPrefix")
+                row = layout.row().prop(mp_props, "ST_fbx_importSuffix")
+                row = layout.row().prop(mp_props, "ST_fbx_importInfix")
+                
+            if patternType == "REGEX":
+                row = layout.row(align=True)
+                row.prop(mp_props, "ST_fbx_importRegex")
+                row.prop(mp_props, "CB_fbx_importRegex_I", text="", toggle=True, icon="EVENT_I")
+                row = layout.row().operator("view3d.checkregex", icon="URL")  
+            
             
             
             row = layout.row()
@@ -267,15 +280,10 @@ def exportAndConvertMainFunction() -> None:
             if mp_props.CB_xml_genMeshXML is True: 
                 gennerateMeshXML(fbxfilepath=fbxFilePath, colname=col)
                 
-            
-            
 
 
         #convert each exported fbx file
         if action == "EXPORT_CONVERT":
-            
-            global itemsToConvert
-            #! USE class xyz(PropertyGroup), use methods .new() and remove() 
             
             mp_props.NU_fbx_toConvert       = len(exportedFBXs)
             mp_props.NU_fbx_converted       = 0
@@ -287,10 +295,42 @@ def exportAndConvertMainFunction() -> None:
             convert = Thread(target=startBatchConvert, args=[exportedFBXs]) 
             convert.start()
             
+
     
     if action == "CONVERT":
-        pass #later
-    
+        mp_props.CB_fbx_showConvStatus  = True
+        mp_props.CB_fbx_stopConvert     = False
+
+        impPath         = mp_props.ST_fbx_importDirPath
+        filesInSubDirs  = mp_props.CB_fbx_importSubFolders
+        patternType     = mp_props.LI_fbx_importPatternType
+        filesToConvert  = []
+
+        for root, dirs, files in os.walk(impPath):    
+            for file in files:
+                if file.lower().endswith(".fbx"):
+                    fileChecked = checkFileByPattern(file, patternType)
+                    
+                    if filesInSubDirs:
+                        if fileChecked is not None:
+                            filesToConvert.append(  fixSlash(root + "/" + file) )
+                    
+                    if not filesInSubDirs:
+                        if fileChecked is not None:
+                            filesToConvert.append(  fixSlash(impPath + "/" + file) )
+
+        filesToConvert.sort()        
+        mp_props.NU_fbx_toConvert       = len(filesToConvert)
+        mp_props.NU_fbx_converted       = 0
+        mp_props.NU_fbx_convertedRaw    = 0
+        mp_props.NU_fbx_convertsFail    = 0
+        mp_props.NU_fbx_convertsSuccess = 0
+                        
+        #run convert on second thread to avoid blender to freeze
+        convert = Thread(target=startBatchConvert, args=[filesToConvert]) 
+        convert.start()
+
+    #end exportmainfunc
 
 
 

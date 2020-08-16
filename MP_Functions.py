@@ -167,6 +167,28 @@ def getListOfFoldersInX(folderpath: str, prefix="") -> list:
 
 
 
+    
+def deleteObj(objname: str) -> None:
+    """delte object with name "ICON_OBJ" """
+    unsetActiveObj()
+    
+    try:
+        objs = tuple(bpy.data.objects)
+        for obj in objs:
+            if objname in obj.name:
+                deselectAll()  
+                setActiveObj(objname=obj.name)
+                bpy.ops.object.delete()
+                pro__print("object removed:", objname)
+                # unsetActiveObj()
+                break
+        
+    except Exception as err:
+        """reference error.. ignore."""
+        pro__print("error while delete obj", objname, err)
+        
+
+
 def deselectAll() -> None:
     """deselects all objects in the scene, works only for visible ones"""
     for obj in bpy.context.scene.objects:
@@ -436,15 +458,10 @@ def pro__print(*args) -> None:
     print()
 
            
-           
-           
-           
-           
 preview_collections = {}
 
 iconsDir = os.path.join(os.path.dirname(__file__), "icons")
 pcoll = bpy.utils.previews.new()
-
 
 def getIcon(icon: str) -> object:
     """return icon for layout (row, col) parameter: 
@@ -482,8 +499,12 @@ def func() -> None:
 
 
 
-def makeReportPopup(title= str("some error occured"), infos=[], icon='INFO', fileName="maniaplanet_report"):
-    if platform == "darwin": return
+def makeReportPopup(title= str("some error occured"), infos: list=[], icon: str='INFO', fileName: str="maniaplanet_report"):
+    """create a small info(text) popup in blender, write infos to a file on desktop"""
+    frameinfo   = getframeinfo(currentframe().f_back)
+    line        = str(frameinfo.lineno)
+    name        = str(frameinfo.filename).split("\\")[-1]
+    pyinfos     = f"\n\nLINE: {line}\nFILE: {name}"
 
     def draw(self, context):
         self.layout.label(text=f"This report is saved at: {desktopPath} as {fileName}.txt", icon="FILE_TEXT")
@@ -493,12 +514,13 @@ def makeReportPopup(title= str("some error occured"), infos=[], icon='INFO', fil
     bpy.context.window_manager.popup_menu(draw, title=title, icon=icon)
     
     with open(desktopPath + fileName + ".txt", "w", encoding="utf-8") as reportFile:
-        if len(infos) > 0:
-            for info in infos:
-                # print("info: ", info)
-                reportFile.write(info + "\n")
-        else:
-            reportFile.write("No relevant infos...")
+
+        reportFile.write(title + "\n\n")
+
+        for info in infos:
+            reportFile.write(info + "\n")
+
+        reportFile.write(pyinfos)
 
 
 
