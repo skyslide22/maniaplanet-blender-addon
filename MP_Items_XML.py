@@ -71,7 +71,9 @@ class MP_PT_Items_ItemXML(Panel):
     @classmethod
     def poll(cls, context):
         mp_props = context.scene.mp_props
-        show = not mp_props.CB_fbx_showConvStatus and not mp_props.LI_fbx_expType == "CONVERT"
+        show =  not mp_props.CB_fbx_showConvStatus \
+                and not mp_props.LI_fbx_expType == "CONVERT" \
+                and mp_props.FI_nadeoIni.endswith("Nadeo.ini")
         return (show)
     
     def draw_header(self, context):
@@ -175,7 +177,9 @@ class MP_PT_Items_MeshXML(Panel):
     @classmethod
     def poll(cls, context):
         mp_props = context.scene.mp_props
-        show = not mp_props.CB_fbx_showConvStatus and not mp_props.LI_fbx_expType == "CONVERT"
+        show =  not mp_props.CB_fbx_showConvStatus \
+                and not mp_props.LI_fbx_expType == "CONVERT" \
+                and mp_props.FI_nadeoIni.endswith("Nadeo.ini")
         return (show)
     
     def draw_header(self, context):

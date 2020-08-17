@@ -51,8 +51,12 @@ class MP_PT_Icons(Panel):
         mp_props = context.scene.mp_props
         mats = bpy.data.materials
         selObjs = bpy.context.selected_objects
-        
+
         layout = self.layout
+        
+        if not isIniValid():
+            row = layout.row().label(text=errorMsgNadeoIni, icon="ERROR")
+            return
         
         row=layout.row()
         row.label(text="test icon", icon_value=getIcon("CAM_FRONT"))

@@ -35,6 +35,8 @@ website_bugreports      = addonSettings["website_bugreports"]
 website_github          = addonSettings["website_github"]
 website_regex           = addonSettings["website_regex"]
 desktopPath             = os.path.join(os.path.join(os.environ['USERPROFILE']), 'Desktop') + "/"
+documentsPath           = os.path.expanduser("~/Documents/").replace("\\", "/")
+programDataPath         = os.environ['ALLUSERSPROFILE']
 website_convertreport   = desktopPath + "convert_report.html"
 
 maniaplanetTextureZipFiles = addonSettings["maniaplanetTextureZipFiles"]
@@ -50,7 +52,6 @@ nadeoIniSettings = {}
 
 def getNadeoIniFilePath() -> str:
     return bpy.context.scene.mp_props.FI_nadeoIni.replace("\\", "/")
-
 
 
 def getNadeoIniData(setting: str) -> str:
@@ -71,11 +72,13 @@ def getNadeoIniData(setting: str) -> str:
         
         for key, value in nadeoIniSettings.items():
             if value.startswith("{exe}"):
-                nadeoIniSettings[key] = value.replace(
-                    "{exe}", 
-                    getNadeoIniFilePath().replace("Nadeo.ini", "")
-                ) + "/"
-                # print(nadeoIniSettings[key])
+                nadeoIniSettings[key] = value.replace("{exe}", getNadeoIniFilePath().replace("Nadeo.ini", "")) + "/"
+
+            if value.startswith("{userdocs}"):
+                nadeoIniSettings[key] = value.replace("{userdocs}", documentsPath)
+
+            if value.startswith("{commondata}"):
+                nadeoIniSettings[key] = value.replace("{commondata}", programDataPath)
             
         return nadeoIniSettings[wantedSetting]   
 

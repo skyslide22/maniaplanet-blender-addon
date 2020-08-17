@@ -190,6 +190,7 @@ def openHelp(helptype: str) -> None:
         cmd = f'explorer "{cmd}"'
         cmd = cmd.replace("/", "\\")
         cmd = cmd.replace("\\\\", "\\")
+        pro__print(cmd)
         subprocess.Popen(cmd, stdout=subprocess.PIPE)
         # print("explorercmd is: ", cmd)
     
