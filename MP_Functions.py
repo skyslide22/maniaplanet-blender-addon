@@ -51,7 +51,7 @@ nadeoIniSettings = {}
 
 
 def getNadeoIniFilePath() -> str:
-    return bpy.context.scene.mp_props.FI_nadeoIni.replace("\\", "/")
+    return fixSlash(bpy.context.scene.mp_props.FI_nadeoIni)
 
 
 def getNadeoIniData(setting: str) -> str:
@@ -85,7 +85,7 @@ def getNadeoIniData(setting: str) -> str:
 
 
 def getManiPlanetMainPath() -> str:
-    return getNadeoIniFilePath().replace("/Nadeo.ini", "/")
+    return fixSlash(getNadeoIniFilePath().replace("/Nadeo.ini", "/"))
 
 
 
