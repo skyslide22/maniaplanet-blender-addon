@@ -20,6 +20,10 @@ from bpy.types import UIList
 def getAddonPath() -> str:
     return os.path.dirname(__file__) + "/"
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 570185d0bd6c0d9ed9e9b57fdd81ff0a7c9f9c4f
 addonSettingsFile   = open(getAddonPath() + "settings.json", "r", encoding="utf-8")
 addonSettings       = json.load(addonSettingsFile)
 addonSettingsFile.close()
@@ -106,10 +110,6 @@ def isIniValid() -> bool:
 def chooseNadeoIniPathFirstMessage(row) -> object:
     return row.label(text="Select Nadeo.ini file first.", icon="ERROR")
 
-
-
-def getAddonPath() -> str:
-    return os.path.dirname(__file__) + "/"
 
 
 
