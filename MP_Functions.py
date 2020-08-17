@@ -72,13 +72,13 @@ def getNadeoIniData(setting: str) -> str:
         
         for key, value in nadeoIniSettings.items():
             if value.startswith("{exe}"):
-                nadeoIniSettings[key] = value.replace("{exe}", getNadeoIniFilePath().replace("Nadeo.ini", "")) + "/"
+                nadeoIniSettings[key] = fixSlash( value.replace("{exe}", getNadeoIniFilePath().replace("Nadeo.ini", "")) + "/" )
 
             if value.startswith("{userdocs}"):
-                nadeoIniSettings[key] = value.replace("{userdocs}", documentsPath)
+                nadeoIniSettings[key] = fixSlash( value.replace("{userdocs}", documentsPath) )
 
             if value.startswith("{commondata}"):
-                nadeoIniSettings[key] = value.replace("{commondata}", programDataPath)
+                nadeoIniSettings[key] = fixSlash( value.replace("{commondata}", programDataPath) )
             
         return nadeoIniSettings[wantedSetting]   
 
@@ -121,31 +121,31 @@ def getDocPath() -> str:
 
 def getDocPathItems() -> str:
     """return absolute path of ../Items/"""
-    return getDocPath() + "/Items/"
+    return fixSlash(getDocPath() + "/Items/")
 
 
 
 def getDocPathWorkItems() -> str:
     """return absolute path of ../Work/Items/"""
-    return getDocPath() + "/Work/Items/"
+    return fixSlash(getDocPath() + "/Work/Items/")
 
 
 
 def getDocPathItemsAssets() -> str:
     """return absolute path of ../_BlenderAssets/"""
-    return str(getDocPathItems() + "/_BlenderAssets/").replace("\\","/")
+    return fixSlash(getDocPathItems() + "/_BlenderAssets/")
 
 
 
 def getNadeoImporterPath() -> str:
     """return full file path of /xx/NadeoImporter.exe"""
-    return getManiPlanetMainPath() + "/NadeoImporter.exe"
+    return fixSlash(getManiPlanetMainPath() + "/NadeoImporter.exe")
 
 
 
 def getNadeoImporterLIBPath() -> str:
     """return full file path of /xx/NadeoImporterMaterialLib.txt"""
-    return getManiPlanetMainPath() + "/NadeoImporterMaterialLib.txt"
+    return fixSlash(getManiPlanetMainPath() + "/NadeoImporterMaterialLib.txt")
 
 
 

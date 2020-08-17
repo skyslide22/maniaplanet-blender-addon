@@ -136,7 +136,7 @@ class MP_PT_Items_Export(Panel):
             row.prop(mp_props, "CB_fbx_showConvStatus", toggle=True, text="OK")
             
             row = layout.row(align=True)
-            row.operator("view3d.openconvreport", text="Open failreports")
+            row.operator("view3d.openconvreport", text="Open report")
             row.prop(mp_props, "CB_fbx_stopConvert",    toggle=True)
             row = layout.row()
             
