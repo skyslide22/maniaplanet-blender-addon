@@ -103,10 +103,8 @@ class MP_PT_Materials_Create(Panel):
         row = layout.row().prop(mp_props, "LI_mat_createUpdate", text="Create or update", expand=True)
         row = layout.row().prop(mp_props, "LI_mat_type",        text="Type",            expand=True )
         
-        
-        #? -------------
-        
-        
+
+
         if mp_props.LI_mat_createUpdate == "CREATE":
             row = layout.row().prop(    mp_props, "ST_mat_name",    text="Name")
             
@@ -126,9 +124,6 @@ class MP_PT_Materials_Create(Panel):
             row = layout.row()
             row.scale_y = 1.5
             row.operator("view3d.materials_create", text="Create Material", icon="ADD")
-
-        
-        #? ----------
         
         
         if mp_props.LI_mat_createUpdate == "UPDATE":
@@ -160,7 +155,6 @@ class MP_PT_Materials_Create(Panel):
 
 def updateMaterial(matname: str, newbtex: str, newmodel: str, newphysic: str, newtype: str, isNadeoMat: str) -> None:
     """update material, overwrite all old settings (del/create all nodes, custom props..)"""
-    mp_props = bpy.context.scene.mp_props
     mats = bpy.data.materials
     mat  = mats[matname]
     
@@ -216,7 +210,6 @@ def createMaterialNodes(matname: str) -> None:
     """create nodes for material (Model= TDSN, TIAdd, etc),
     load textures if necessary, connect nodes if necessary, """
     mp_props = bpy.context.scene.mp_props
-    imgs = bpy.data.images
     mats = bpy.data.materials
     mat  = mats[matname]
     matModel = mat["Model"]
@@ -301,14 +294,11 @@ def createMaterialNodes(matname: str) -> None:
     tex_I_glow.location = x(4), y(4)
     tex_I_glow.inputs[1].default_value = 200 if matModel.upper() == "TIADD" else 3
 
-    # -----------------
-    
+
     links.new(uvmap.outputs[0], tex_D.inputs[0])
     links.new(uvmap.outputs[0], tex_S.inputs[0])
     links.new(uvmap.outputs[0], tex_N.inputs[0])
     links.new(uvmap.outputs[0], tex_I.inputs[0])
-    
-    # ------------------
     
 
     
@@ -334,7 +324,6 @@ def createMaterialNodes(matname: str) -> None:
         links.new(bsdf_mixShader.outputs[0],    output.inputs[0])
         
     
-    
     #TIAdd needs special stuff, using only _I texture as diffuse, "transparent glow"
     if matModel.upper() == "TIADD":
         
@@ -349,7 +338,6 @@ def createMaterialNodes(matname: str) -> None:
         links.new(tex_I_glow.outputs[0],     bsdf_mixShader.inputs[2])
         links.new(bsdf_mixShader.outputs[0], output.inputs[0])
             
-    # ------------------
     
     missingTexs = []
     matBTexSrc  = mp_props.LI_mat_texFolders
@@ -397,8 +385,7 @@ def createMaterialNodes(matname: str) -> None:
         if load_ITex[1] is True:    assignTextureToImageNode(texname=load_ITex[0], node=tex_I)
         if load_ITex[1] is False:   missingTexs.append("Texture missing: " + load_ITex[0])
  
-    # ----
-    
+     
     bm = "OPAQUE"
     if      matModel == "TDSN":          bm = "OPAQUE"
     elif    matModel == "TDSNI":         bm = "OPAQUE"

@@ -14,12 +14,14 @@ from bpy.types import UIList
 
 
 
-
 """ADDON SETTINGS, read addon settings from settings.json, convert to dict"""
-addonSettingsFile   = open("settings.json", "r", encoding="utf-8")
+
+def getAddonPath() -> str:
+    return os.path.dirname(__file__) + "/"
+
+addonSettingsFile   = open(getAddonPath() + "settings.json", "r", encoding="utf-8")
 addonSettings       = json.load(addonSettingsFile)
 addonSettingsFile.close()
-
 # -------
 
 errorMsgAbsolutePath = addonSettings["errorMsgAbsolutePath"]
@@ -282,7 +284,6 @@ def getCollectionHierachy(colname: str="", objname: str="No_Name", hierachystart
 
 def checkMatValidity(matname: str) -> str("missing prop as str or True"):
     """check material for properties, retrurn True if all props are set, else return False"""
-    
     mat = bpy.data.materials[matname]
     matprops = mat.keys()
 
@@ -475,26 +476,6 @@ def getIcon(icon: str) -> object:
 def generateUID() -> str:
     """generate unique id and return as string"""               
     return str(uuid.uuid4())
-                
-                
-                
-def func() -> None:
-    """development stuff, can not access bpy.data stuff while reload script, so add delay of 1s"""
-    pass
-
-# timer = bpy.app.timers.register(func, first_interval=1)
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -514,12 +495,9 @@ def makeReportPopup(title= str("some error occured"), infos: list=[], icon: str=
     bpy.context.window_manager.popup_menu(draw, title=title, icon=icon)
     
     with open(desktopPath + fileName + ".txt", "w", encoding="utf-8") as reportFile:
-
         reportFile.write(title + "\n\n")
-
         for info in infos:
             reportFile.write(info + "\n")
-
         reportFile.write(pyinfos)
 
 

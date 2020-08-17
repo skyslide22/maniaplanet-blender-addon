@@ -25,10 +25,6 @@ from .MP_Icon_Create    import *
 from .MP_Help           import *
 from .MP_Items_Import   import *
 
-itemsToConvert = []
-
-
-
 
 
 class MP_OT_Items_Export_ExportAndOrConvert(Operator):
@@ -71,7 +67,6 @@ class MP_PT_Items_Export(Panel):
 
         layout = self.layout
         mp_props        = context.scene.mp_props
-        mp_props_pivots = context.scene.mp_props_pivots
         
         if not isIniValid():
             row = layout.row().label(text=errorMsgNadeoIni, icon="ERROR")
@@ -129,9 +124,7 @@ class MP_PT_Items_Export(Panel):
             row.operator("view3d.exportfbx", text=mp_props.LI_fbx_expType, icon="EXPORT")
         
             
-        
-        
-        
+
         
         if mp_props.CB_fbx_showConvStatus:
             
@@ -165,10 +158,7 @@ class MP_PT_Items_Export(Panel):
             row.label(text="Fail: " + str(mp_props.NU_fbx_convertsFail), icon=convertstatus)
 
             
-        
-        
-    
-        
+ 
         
 def exportAndConvertMainFunction() -> None:
     """export&convert fbx main function, call all other functions on conditions set in UI"""

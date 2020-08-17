@@ -35,7 +35,6 @@ class MP_OT_Icon_Create_Test(Operator):
         createIconsTest()
         return {"FINISHED"}
     
-#endregion  
    
 class MP_PT_Icons(Panel):
     # region bl_
@@ -77,34 +76,6 @@ class MP_PT_Icons(Panel):
         row.prop(context.scene.render, "film_transparent", text="Transparent background", ) 
                 
         camstyle= mp_props.LI_icon_camPos
-        
-        # region fuck this
-        # if "iconPreview_CLASSIC.png" in bpy.data.textures.keys():
-        #     if camstyle == "FRONT":
-        #         tex = bpy.data.textures["iconPreview_CLASSIC.png"]
-        #         row.template_preview(tex, show_buttons=False, preview_id="1" )
-        #         row = layout.row()
-                
-        #     if camstyle == "LEFT":      
-        #         tex = bpy.data.textures["iconPreview_LEFT.png"]
-        #         row.template_preview(tex, show_buttons=False, preview_id="2" )
-        #         row = layout.row()
-                
-        #     if camstyle == "RIGHT":     
-        #         tex = bpy.data.textures["iconPreview_RIGHT.png"]
-        #         row.template_preview(tex, show_buttons=False, preview_id="3"  )
-        #         row = layout.row()
-                
-        #     if camstyle == "TOP":       
-        #         tex = bpy.data.textures["iconPreview_TOP.png"]
-        #         row.template_preview(tex, show_buttons=False, preview_id="4"  )
-        #         row = layout.row()
-                
-        #     if camstyle == "CLASSIC":   
-        #         tex = bpy.data.textures["iconPreview_CLASSIC.png"]
-        #         row.template_preview(tex, show_buttons=False, preview_id="5"  )
-        #         row = layout.row()
-        # endregion
         
         row = layout.row()
         row.scale_y = 1.5
@@ -365,9 +336,6 @@ def scaleObjToMatchCamPosRotScale(objname: str):
         dimFac = camPosScale / biggestDim * margin
         obj.dimensions = (dimX*dimFac, dimY*dimFac, dimZ*dimFac)
         
-        
-        
-        
     bpy.ops.object.transform_apply(location=False, rotation=False, scale=True)
 
 
@@ -421,7 +389,6 @@ def renderIcon(objname, save=True):
     
     #set visibility status of all objs back to before iconshoot
     unhideSelected(objs=visObjs)
-    
     
     
     
