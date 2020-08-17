@@ -25,7 +25,6 @@ from .MP_Items_XML      import *
 from .MP_Icon_Create    import *
 from .MP_Help           import *
 
-itemsToConvert = []
 
 
 

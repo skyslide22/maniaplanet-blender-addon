@@ -246,6 +246,7 @@ def copyManiaPlanetTexturesToAddonFolder():
     # meme.DrakeFormat("Use a debugger", "print('line 218 reached')")
     
     for relativeZippath in maniaplanetTextureZipFiles:
+        env = "Stadium"
         if "stadium"    in relativeZippath.lower():    env = "Stadium"
         if "canyon"     in relativeZippath.lower():    env = "Canyon"
         if "valley"     in relativeZippath.lower():    env = "Valley"

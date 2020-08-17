@@ -24,14 +24,6 @@ from bpy.types import (
 from .MP_Functions import * 
 from .MP_Icon_Create import *
 
-#! this line below kills the addon: "addon not found: '_blender-dev-new'"
-# from . import *
-# try:
-#     from . import test
-#     print("works")
-# except Exception as err:
-#     print("error is", err)
-
 
 errorEnumProps = [("ERROR", "ERROR", "ERROR", "ERROR", 0)]
 
@@ -47,9 +39,6 @@ def getIconDimensions():
 
 
 def getIconCamPos():
-    # pcoll = preview_collections["main"]
-    # CAM_LEFT = pcoll["CAM_LEFT"].icon_id
-    
     return  [
         ("FRONT",   "FRONT",    "FRONT",    getIcon("CAM_FRONT"),   0),
         ("LEFT",    "LEFT",     "LEFT",     getIcon("CAM_LEFT"),    1),
@@ -218,8 +207,6 @@ def fixCustomTexSrcPath(self, context, origin) -> None:
         # [] = x style avoids infinite recursion, loop will happen here: mp_props.sth = x
     
 
-  
-  
 
 def getMatEnvies() -> list:
     envies = ["Stadium", "Canyon", "Valley", "Lagoon", "Storm"]
@@ -301,7 +288,6 @@ def getWayPointVariations() -> list:
     
 
 def getItemXMLCollections() -> list:
-    envis   = ["Common", "SMCommon", "Storm", "Canyon", "Valley", "Stadium", "Lagoon"]
     return [
         ("Stadium", "Stadium",  "", getIcon("ENVI_STADIUM"),    1),
         ("Canyon",  "Canyon",   "", getIcon("ENVI_CANYON"),     2),
@@ -318,13 +304,13 @@ def getItemXMLType() -> list:
     return [    
         ("StaticObject","StaticObject","StaticObject",  "KEYFRAME",     0), 
         ("DynaObject",  "DynaObject",   "DynaObject",   "KEYFRAME_HLT", 1) 
-        ]
+    ]
 
 def getMeshXMLType() -> list:
     return [    
         ("Static",  "Static",   "Static",   "KEYFRAME",     0), 
         ("Dynamic", "Dynamic",  "Dynamic",  "KEYFRAME_HLT", 1) 
-        ]
+    ]
 
 def updateGridAndLevi(self, context) -> None:
     mp_props = bpy.context.scene.mp_props
@@ -378,7 +364,7 @@ def redrawPanel(self, context):
 #endregion acronyms
 
 class MP_Properties_for_Panels(bpy.types.PropertyGroup):
-    
+    """general maniaplanet properties"""
     # general
     FI_nadeoIni         : StringProperty(subtype="FILE_PATH")
     FO_MPdocPath        : StringProperty(subtype="DIR_PATH")
@@ -489,7 +475,7 @@ class MP_Properties_for_Panels(bpy.types.PropertyGroup):
 
 
 class MP_Properties_Generated(PropertyGroup):
-    
+    """maniaplanet properties generated"""
     ST_matPhysicsId :  StringProperty(name="PhysicsId",         default="Concrete")
     ST_matName :       StringProperty(name="Mat Name",          default="")
     ST_matModel:       StringProperty(name="Mat Model",         default="TDSN")
@@ -498,12 +484,14 @@ class MP_Properties_Generated(PropertyGroup):
     
 
 class MP_Properties_Pivots(PropertyGroup):
+    """maniaplanet properties generated for pivots (item xml)"""
     NU_pivotX   : FloatProperty(name="X", default=0.0, min=-1024, max=1024, soft_min=-8, soft_max=8, step=10)
     NU_pivotY   : FloatProperty(name="Y", default=0.0, min=-1024, max=1024, soft_min=-8, soft_max=8, step=10)
     NU_pivotZ   : FloatProperty(name="Z", default=0.0, min=-1024, max=1024, soft_min=-8, soft_max=8, step=10)
     
     
 class MP_ItemConvertStatus(PropertyGroup):
+    """maniaplanet properties for the convert progress, status"""
     ST_fbx_toConvert        : StringProperty(name="fbxname", default="")
     CB_fbx_convertFailed    : BoolProperty(name="status",   default=False)
     CB_fbx_convertDone      : BoolProperty(name="status",   default=False)

@@ -273,9 +273,7 @@ def beautifyError(error: str):
     error = error.replace("\\n",  "<br />")
     error = error.replace("\\",   "/")
     error = error.replace(", None)", "")
-    
-    # "(b'NadeoImporter 2019-10-09_22_51\\r\\nfile not found : skyslide_main1.Trigger.Shape.gbx\\r\\nwhile reading :user:\\\\Work\\\\Items\\\\skyslide_main1.Item.xml\\r\\n', None)(b'NadeoImporter 2019-10-09_22_51\\r\\nCreated :user:\\\\Items\\\\skyslide_main1.Mesh.gbx\\r\\nCreated :user:\\\\Items\\\\skyslide_main1.Shape.gbx\\r\\n', None)"
-    
+        
     prettymsg = ""
     if LMMissing        in error.lower(): prettymsg="Lightmap uv layer is missing"
     if BMMissing        in error.lower(): prettymsg="Basematerial uv layer is missing"
@@ -288,10 +286,6 @@ def beautifyError(error: str):
 
     return prettymsg
 
-        
-
-    
-# bpy.app.register(checkItemsToConvertStatus, first_interval=1)
     
     
     

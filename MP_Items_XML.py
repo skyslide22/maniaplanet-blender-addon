@@ -18,7 +18,6 @@ from bpy.types import (
     PropertyGroup
 )
 from .MP_Functions import *
-# xmlpath = os.path.dirname(__file__) + "/test.xml"
 
 
 
@@ -165,7 +164,7 @@ class MP_PT_Items_MeshXML(Panel):
     # region bl_
     """Creates a Panel in the Object properties window"""
     bl_category = 'ManiaPlanetAddon'
-    bl_label = " Mesh XML"
+    bl_label = "Mesh XML"
     bl_idname = "MP_PT_Items_Export_MeshXML"
     bl_parent_id = "MP_PT_Items_Export"
     bl_space_type = 'VIEW_3D'
@@ -188,12 +187,8 @@ class MP_PT_Items_MeshXML(Panel):
         # layout.scaleY = 2
     
     def draw(self, context):
-        
-        
-
         layout = self.layout
         mp_props        = context.scene.mp_props
-        mp_props_pivots = context.scene.mp_props_pivots
         
         if mp_props.CB_fbx_showConvStatus:
             return
@@ -214,8 +209,7 @@ class MP_PT_Items_MeshXML(Panel):
             row.column().prop(mp_props, "CO_xml_lightglobcolor", text="") if mp_props.CB_xml_lightglobcolor else None
             # row.enabled = True if mp_props.CB_xml_lightglobcolor is True else False
             
-            
-            
+
         layout.separator(factor=spacerFac)
 
 
@@ -345,7 +339,6 @@ def getMeshXMLData(colname: str) -> dict:
     """generate mesh xml infos """
     mp_props    = bpy.context.scene.mp_props
     colObjs     = bpy.data.collections[colname].all_objects
-    mats        = bpy.data.materials
     
     fixAllMatNames()
     
@@ -405,7 +398,6 @@ def getMeshXMLData(colname: str) -> dict:
 
 def gennerateMeshXML(fbxfilepath: str, colname: str) -> None:
     """generate meshparams.xml for fbx"""
-    
     data        = getMeshXMLData(colname=colname)
     root        = ET.Element("MeshParams")
     materials   = ET.Element("Materials")
