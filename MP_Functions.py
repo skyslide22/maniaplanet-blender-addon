@@ -16,6 +16,7 @@ from bpy.types import UIList
 
 """ADDON SETTINGS, read addon settings from settings.json, convert to dict"""
 
+
 def getAddonPath() -> str:
     return os.path.dirname(__file__) + "/"
 
