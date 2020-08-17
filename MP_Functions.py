@@ -16,7 +16,12 @@ from bpy.types import UIList
 
 
 """ADDON SETTINGS, read addon settings from settings.json, convert to dict"""
-addonSettingsFile   = open("settings.json", "r", encoding="utf-8")
+
+def getAddonPath() -> str:
+    return os.path.dirname(__file__) + "/"
+
+
+addonSettingsFile   = open(getAddonPath() + "settings.json", "r", encoding="utf-8")
 addonSettings       = json.load(addonSettingsFile)
 addonSettingsFile.close()
 
@@ -103,10 +108,6 @@ def isIniValid() -> bool:
 def chooseNadeoIniPathFirstMessage(row) -> object:
     return row.label(text="Select Nadeo.ini file first.", icon="ERROR")
 
-
-
-def getAddonPath() -> str:
-    return os.path.dirname(__file__) + "/"
 
 
 
