@@ -23,7 +23,7 @@ bl_info = {
     "author" : "skyslide & maxi031",
     "description" : "Export collections, generate XMLs, import mats from xmls, convert items, all u nedd boi",
     "blender" : (2, 83, 0),
-    "version" : (0, 0, 1),
+    "version" : (0, 1, 1),
     "location" : "View3D",
     "warning" : "",
     "category" : "Generic"
