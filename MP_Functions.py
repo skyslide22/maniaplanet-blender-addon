@@ -43,7 +43,9 @@ maniaplanetTextureZipFiles = addonSettings["maniaplanetTextureZipFiles"]
 missingPhysicsInLib = addonSettings["missingPhysicsInLib"]
 favPhysicIds = addonSettings["favPhysicIds"]
 
-notAllowedColnames = addonSettings["notAllowedColnames"]
+notAllowedColnames      = addonSettings["notAllowedColnames"]
+notDefaultUVLayerNames  = addonSettings["notDefaultUVLayerNames"]
+defaultUVLayerNames     = addonSettings["DefaultUVLayerNames"]
 # -----
 
 """NADEO.INI DATA"""
@@ -152,6 +154,40 @@ def getNadeoImporterLIBPath() -> str:
 def r(v) -> float:
     """return math.radians, example: some_blender_object.rotation_euler=(radian, radian, radian)"""
     return math.radians(v)
+
+
+
+def fixUvLayerNamesOfObject(objname: str) -> None:
+    """rename/create necessary uvlayer names of an object (eg: basematerial/Uvlayer1/sdkhgkjds => BaseMaterial)"""
+    objs    = bpy.data.objects
+    obj     = objs[objname]
+    
+    if obj.type == "MESH":
+        uvs = obj.data.uv_layers
+        validUvLayerNames   = [uv.lower() for uv in notDefaultUVLayerNames + defaultUVLayerNames]
+        normalUVLayerNames = [uv.lower() for uv in defaultUVLayerNames]
+
+        # create uvlayer BaseMaterial & LightMap
+        if len(uvs) == 0:
+            uvs.new(name="BaseMaterial", do_init=True)
+            uvs.new(name="LightMap",     do_init=True)
+
+        # rename first uvlayer to basematerial
+        if len(uvs) > 0:
+            if uvs[0].name.lower() == "basematerial" or\
+               uvs[0].name.lower() not in validUvLayerNames:
+                uvs[0].name = "BaseMaterial"
+        
+        # create lightmap if uvlayer 0 is basematerial
+        if len(uvs) == 1:
+            if uvs[0].name.lower() in normalUVLayerNames:
+                uvs.new(name="LightMap", do_init=True) #do_init: copy last uvlayer data
+
+        # create lightmap if uvlayer 1 name is lightmap or not a valid name
+        if len(uvs) > 1:
+            if uvs[1].name.lower() == "lightmap" or\
+               uvs[1].name.lower() not in validUvLayerNames:
+                uvs[1].name = "LightMap"
 
 
 

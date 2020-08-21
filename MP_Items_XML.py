@@ -60,7 +60,7 @@ class MP_PT_Items_ItemXML(Panel):
     # region bl_
     """Creates a Panel in the Object properties window"""
     bl_category = 'ManiaPlanetAddon'
-    bl_label = " Item XML"
+    bl_label = "Item XML"
     bl_idname = "MP_PT_Items_Export_ItemXML"
     bl_parent_id = "MP_PT_Items_Export"
     bl_space_type = 'VIEW_3D'

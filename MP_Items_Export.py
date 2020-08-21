@@ -183,7 +183,8 @@ def exportAndConvertMainFunction() -> None:
         for obj in allObjs:
             
             name = obj.name.lower()
-            if name.startswith("cp") or name.startswith("checkpoint"):    obj.name = "_socket_CHECKPOINT"
+            if  name.startswith("cp") or \
+                name.startswith("checkpoint"):  obj.name = "_socket_CHECKPOINT"
             if name.startswith("multilap"):     obj.name = "_socket_MULTILAP"
             if name.startswith("finish"):       obj.name = "_socket_FINISH"
             if name.startswith("start"):        obj.name = "_socket_START"
@@ -216,6 +217,7 @@ def exportAndConvertMainFunction() -> None:
             
             #unparent all objects, convert relative transforms to parent to absolute to world
             for obj in cols[col].all_objects:
+                fixUvLayerNamesOfObject(obj.name)
                 if not obj.name.lower().startswith("origin"):
                     deselectAll()
                     obj.select_set(True)

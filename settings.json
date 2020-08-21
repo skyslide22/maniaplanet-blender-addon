@@ -63,5 +63,15 @@
     "notAllowedColnames": [
         "master collection",
         "scene"
+    ],
+    "notDefaultUVLayerNames": [
+        "Decal",
+        "NormalSpec",
+        "MulInside"
+    ],
+    "DefaultUVLayerNames": [
+        "BaseMaterial",
+        "LightMap"
     ]
+
 }
