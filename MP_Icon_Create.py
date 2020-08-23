@@ -19,10 +19,10 @@ from . import *
 class MP_OT_Icon_Create(Operator):
     bl_idname = "view3d.createicon"
     bl_label = "help"
-    bl_desciption = "open addon meshxml template folder"
+    bl_desciption = "create icons"
    
     def execute(self, context):
-        createIcons()
+        createIcons(colnames=[])
         return {"FINISHED"}
     
     
