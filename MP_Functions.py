@@ -59,7 +59,8 @@ def getNadeoIniFilePath() -> str:
 def getNadeoIniData(setting: str) -> str:
     """return setting, if setting is not in dict nadeoIniSettings, read nadeo.ini and add it"""
     wantedSetting = setting
-    possibleSettings = ["WindowTitle", "Distro", "Language", "UserDir", "CommonDir"]
+    # possibleSettings = ["WindowTitle", "Distro", "Language", "UserDir", "CommonDir"] #gg steam
+    possibleSettings = ["WindowTitle", "Distro", "UserDir", "CommonDir"]
     
     try:
         return nadeoIniSettings[setting]
